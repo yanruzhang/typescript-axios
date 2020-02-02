@@ -110,7 +110,7 @@ export interface AxiosStatic extends AxiosInstance {
 export interface AxiosInterceptorManager<T> {
   use(resolved: ResolvedFn<T>, rejected?: RejectedFn): number
 
-  reject(id: number): void
+  eject(id: number): void
 }
 
 export interface ResolvedFn<T> {
