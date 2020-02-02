@@ -70,8 +70,8 @@ export function buildURL(
   return url
 }
 
-export function isAbsolutedURL(url: string): boolean {
-  return /(^[a-z][a-z\d\+\-\.]*:)?\/\//i.test(url)
+export function isAbsoluteURL(url: string): boolean {
+  return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url)
 }
 
 export function combineURL(baseURL: string, relativeURL?: string): string {
@@ -81,7 +81,7 @@ export function combineURL(baseURL: string, relativeURL?: string): string {
 export function isURLSameOrigin(requestURL: string): boolean {
   const parsedOrigin = resolveURL(requestURL)
   return (
-    parsedOrigin.protocol === currentOrigin.protocol && currentOrigin.host === currentOrigin.host
+    parsedOrigin.protocol === currentOrigin.protocol && parsedOrigin.host === currentOrigin.host
   )
 }
 
