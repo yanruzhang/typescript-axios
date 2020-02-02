@@ -2,9 +2,9 @@ export type Method =
   | 'get'
   | 'GET'
   | 'delete'
-  | 'Delete'
+  | 'DELETE'
   | 'head'
-  | 'Head'
+  | 'HEAD'
   | 'options'
   | 'OPTIONS'
   | 'post'
@@ -50,11 +50,11 @@ export interface AxiosResponse<T = any> {
 export interface AxiosPromise<T = any> extends Promise<AxiosResponse<T>> {}
 
 export interface AxiosError extends Error {
-  isAxiosError: boolean
   config: AxiosRequestConfig
-  code?: string | null
+  code?: string
   request?: any
   response?: AxiosResponse
+  isAxiosError: boolean
 }
 
 export interface Axios {

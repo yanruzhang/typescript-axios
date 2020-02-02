@@ -81,7 +81,7 @@ export function combineURL(baseURL: string, relativeURL?: string): string {
 export function isURLSameOrigin(requestURL: string): boolean {
   const parsedOrigin = resolveURL(requestURL)
   return (
-    parsedOrigin.protocol === currentOrigin.protocol && currentOrigin.host === currentOrigin.host
+    parsedOrigin.protocol === currentOrigin.protocol && parsedOrigin.host === currentOrigin.host
   )
 }
 
