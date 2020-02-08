@@ -10,3 +10,6 @@ Promise based HTTP client for the browser. Typescript refactored Axios.
 - Cancel requests
 - Automatic transforms for JSON data
 - Client side support for protecting against [XSRF](https://en.wikipedia.org/wiki/Cross-site_request_forgery)
+
+## Installation
+npm i typescript-axios-wb
